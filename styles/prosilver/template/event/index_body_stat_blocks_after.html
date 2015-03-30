@@ -1,0 +1,11 @@
+    <!-- IF S_IN_GROUP -->
+        <h3 class="small-icon icon-ts no-bulletin"><a href="{U_TS}" title="{L_TSI}" role="menuitem">{L_TSI}</a></h3>
+    <!-- IF S_IN_TS_INDEX_CLIENT or S_IN_TS_INDEX_COUNT -->
+        {L_COUNT}<!-- IF S_IN_TS_INDEX_COUNT --> (<b>{COUNT}</b>)<!-- ENDIF --><!-- IF S_IN_TS_INDEX_CLIENT and not S_IN_TS_INDEX_CLIENT_EMPTY -->: <b>{TSVIEWER}</b><!-- ENDIF --><!-- IF S_IN_TS_INDEX_CLIENT_EMPTY -->: <b>{L_NO_ONE_ONLINE}</b><!-- ENDIF -->
+        <br/><br/>
+    <!-- ENDIF --> 
+    <!-- IF S_IN_ERROR -->
+        {ERROR}
+        <br/><br/>
+    <!-- ENDIF -->
+    <!-- ENDIF -->

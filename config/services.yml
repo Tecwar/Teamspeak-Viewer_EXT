@@ -1,0 +1,25 @@
+services:
+    tecs.ts.controller:
+        class: tecs\ts\controller\main
+        arguments:
+            - @config
+            - @config_text
+            - @controller.helper
+            - @dbal.conn
+            - @template
+            - @user
+            - %core.php_ext%
+            - @auth
+    tecs.ts.listener:
+        class: tecs\ts\event\main_listener
+        arguments:
+            - @config
+            - @controller.helper
+            - @dbal.conn
+            - @template
+            - @user
+            - %core.php_ext%
+            - @auth
+        tags:
+            - { name: event.listener }
+

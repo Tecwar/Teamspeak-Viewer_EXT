@@ -1,0 +1,7 @@
+tecs_ts:
+    pattern: /teamspeak-viewer
+    defaults: { _controller: tecs.ts.controller:base }
+tecs_ts2:
+    pattern: /teamspeak-viewer.php
+    defaults: { _controller: tecs.ts.controller:redirect }
+

@@ -1,0 +1,134 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_TS_EXT}</h1>
+<p>{L_TS_EXT_EXPLAIN}</p>
+
+<form id="ts_ext" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_TS_PERMISSIONS_LEG}</legend> 
+		<dl>
+			<dt><label for="ts_loginset">{L_TS_LOGINSET}{L_COLON}</label><br /><span>{L_TS_LOGINSET_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_loginset" value="1" id="ts_loginset"<!-- IF ts_loginset --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_loginset" value="0" <!-- IF not ts_loginset --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_groupset">{L_TS_GROUPSET}{L_COLON}</label><br /><span>{L_TS_GROUPSET_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_groupset" value="1" id="ts_groupset"<!-- IF ts_groupset --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_groupset" value="0" <!-- IF not ts_groupset --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_TS_QUERY_LEG}</legend>
+		<dl>
+			<dt><label for="ts_host">{L_TS_HOST}{L_COLON}</label><br /><span>{L_TS_HOST_EXPLAIN}</span></dt>
+			<dd><input name="ts_host" type="text" id="ts_host" value="{ts_host}" maxlength="255" validate="string"/></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_query">{L_TS_QUERY}{L_COLON}</label><br /><span>{L_TS_QUERY_EXPLAIN}</span></dt>
+			<dd><input name="ts_query" type="text" id="ts_query" value="{ts_query}" maxlength="255" validate="string"/></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_user">{L_TS_USER}{L_COLON}</label><br /><span>{L_TS_USER_EXPLAIN}</span></dt>
+			<dd><input name="ts_user" type="text" id="ts_user" value="{ts_user}" maxlength="255" validate="string"/></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_qpass">{L_TS_QPASS}{L_COLON}</label><br /><span>{L_TS_QPASS_EXPLAIN}</span></dt>
+			<dd><input name="ts_qpass" type="password"id="ts_qpass" value="{ts_qpass}" maxlength="255" validate="string"/></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_TS_CLIENT_LEG}</legend>
+		<dl>
+			<dt><label for="ts_voice">{L_TS_VOICE}{L_COLON}</label><br /><span>{L_TS_VOICE_EXPLAIN}</span></dt>
+			<dd><input name="ts_voice" type="text" id="ts_voice" value="{ts_voice}" maxlength="255" validate="string"/></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_loginip">{L_TS_LOGINIP}{L_COLON}</label><br /><span>{L_TS_LOGINIP_EXPLAIN}</span></dt>
+			<dd><input name="ts_loginip" type="text" id="ts_loginip" value="{ts_loginip}" maxlength="255" validate="string"/></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_pass">{L_TS_PASS}{L_COLON}</label><br /><span>{L_TS_PASS_EXPLAIN}</span></dt>
+			<dd><input name="ts_pass" type="text" id="ts_pass" value="{ts_pass}" maxlength="255" validate="string"/></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_TS_SHOW_LEG}</legend>
+		<dl>
+			<dt><label for="ts_banner">{L_TS_BANNER}{L_COLON}</label><br /><span>{L_TS_BANNER_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_banner" value="1" id="ts_banner"<!-- IF ts_banner --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_banner" value="0" <!-- IF not ts_banner --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_clogindaten">{L_TS_CLOGINDATEN}{L_COLON}</label><br /><span>{L_TS_CLOGINDATEN_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_clogindaten" value="1" id="ts_clogindaten"<!-- IF ts_clogindaten --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_clogindaten" value="0" <!-- IF not ts_clogindaten --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_uptime">{L_TS_UPTIME}{L_COLON}</label><br /><span>{L_TS_UPTIME_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_uptime" value="1" id="ts_uptime"<!-- IF ts_uptime --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_uptime" value="0" <!-- IF not ts_uptime --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_wknachricht">{L_TS_WKNACHRICHT}{L_COLON}</label><br /><span>{L_TS_WKNACHRICHT_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_wknachricht" value="1" id="ts_wknachricht"<!-- IF ts_wknachricht --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_wknachricht" value="0" <!-- IF not ts_wknachricht --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_count">{L_TS_COUNT}{L_COLON}</label><br /><span>{L_TS_COUNT_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_count" value="1" id="ts_count"<!-- IF ts_count --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_count" value="0" <!-- IF not ts_count --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ts_tsloginbutton">{L_TS_TSLOGINBUTTON}{L_COLON}</label><br /><span>{L_TS_TSLOGINBUTTON_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_tsloginbutton" value="1" id="ts_tsloginbutton"<!-- IF ts_tsloginbutton --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_tsloginbutton" value="0" <!-- IF not ts_tsloginbutton --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<hr>
+		<dl>
+			<dt><label for="ts_index_count">{L_TS_INDEX_COUNT}{L_COLON}</label><br /><span>{L_TS_INDEX_COUNT_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_index_count" value="1" id="ts_index_count"<!-- IF ts_index_count --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_index_count" value="0" <!-- IF not ts_index_count --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl> 
+		<dl>
+			<dt><label for="ts_index_client">{L_TS_INDEX_CLIENT}{L_COLON}</label><br /><span>{L_TS_INDEX_CLIENT_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_index_client" value="1" id="ts_index_client"<!-- IF ts_index_client --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_index_client" value="0" <!-- IF not ts_index_client --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl> 
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_TS_CACHE_LEG}</legend>
+		<dl>
+			<dt><label for="ts_cache_delay">{L_TS_CACHE_DELAY}{L_COLON}</label><br /><span>{L_TS_CACHE_DELAY_EXPLAIN}</span></dt>
+			<dd><input name="ts_cache_delay" type="text" id="ts_cache_delay" value="{ts_cache_delay}" maxlength="255" validate="string"/></dd>
+		</dl>
+		<dl>
+			<dt><label for="action_purge_cache">{L_TS_PURGE_CACHE}</label><br /><span>{L_TS_PURGE_CACHE_EXPLAIN}</span></dt>
+			<dd><label><input class="button2" type="submit" id="action_purge_cache" name="action_purge_cache" value="{L_RUN_NOW}" /></dd>
+		</dl>
+	</fieldset>
+	
+	<fieldset>
+		<legend>{L_TS_LINK_LEG}</legend>	
+		<dl>
+			<dt><label for="ts_link_enable">{L_TS_LINK_ENABLE}{L_COLON}</label><br /><span>{L_TS_LINK_ENABLE_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ts_link_enable" value="1" id="ts_link_enable"<!-- IF ts_link_enable --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="ts_link_enable" value="0" <!-- IF not ts_link_enable --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl> 
+	</fieldset>
+	
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_LEG}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

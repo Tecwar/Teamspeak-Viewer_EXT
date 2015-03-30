@@ -1,0 +1,36 @@
+{
+	"name": "tecs/ts",
+	"type": "phpbb-extension",
+	"description": "Teamspeak Viewer base on TeamSpeak 3 PHP Framework",
+	"homepage": "http://area51.gdrr.info",
+	"version": "1.4.6 beta",
+	"time": "2015-28-03",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "Tecs",
+			"email": "area51@gdrr.info",
+			"homepage": "http://area51.gdrr.info",
+			"role": "Lead Developer"
+		},
+	{
+			"name": "Timo Meyer-Franke",
+			"email": "timo@meyer-franke.com",
+			"homepage": "http://hard-soft.meyer-franke.com",
+			"role": "Developer"
+		}
+		],
+	"require": {
+		"php": ">=5.3.9"
+	},
+	"extra": {
+		"display-name": "Teamspeak-Viewer",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.3,<3.2.*@dev"
+		},
+		"version-check": {
+			"host": "www.gdrr.info",
+			"directory": "/versioncheck",
+			"filename": "ts_ext.json"
+		}
+	}
+}

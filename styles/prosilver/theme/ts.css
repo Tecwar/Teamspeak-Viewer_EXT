@@ -1,0 +1,91 @@
+#containerts {margin: 0; padding: 40px 0px;text-align: center;}
+.cinner {width:900px;margin: 0px auto; text-align: left;}
+.tsviewerbox {float:left;padding:20px 0px;width: 370px;}
+.tsrefreshbox{float:left;padding:5px;}
+.tsinfobox{float:left;margin: 0px;padding: 23px;font-size:12px;max-width:470px;}
+#cleardiv{clear:both}
+.info {font-size:14px;padding:20px}
+.tsbanner { width: 100%;max-width:470px;}
+@media only screen and (max-width: 950px), only screen and (max-device-width: 950px) {
+.tsbanner { width: 100%;max-width:400px;}
+}
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+#containerts {margin: 0; padding: 0px 0px;}
+.tsviewerbox{float:both;}
+.tsrefreshbox{float:both;}
+.tsinfobox{float:both;max-width:370px;}
+.cinner {width:370px;}
+}
+#wrap {
+	min-width: 380px;
+}
+table.ts3_viewer {
+	width: 100%;
+	border: 0px;
+	border-collapse: collapse;
+	font-size: 10pt;
+}
+table.ts3_viewer td {
+	white-space: nowrap;
+	line-height:14px;
+	padding: 0px;
+	margin:0px;
+	border: 0px;
+}
+table.ts3_viewer span.top {
+	vertical-align: top;
+}
+table.ts3_viewer td.corpus {
+	width: 100%;
+}
+table.ts3_viewer td.query {
+	font-style: italic;
+}
+table.ts3_viewer td.spacer {
+	overflow: hidden;
+}
+table.ts3_viewer td.left {
+	text-align: left;
+}
+table.ts3_viewer td.right {
+	text-align: right;
+}
+table.ts3_viewer td.center {
+	text-align: center;
+}
+table.ts3_viewer td.suffix {
+	vertical-align: top;
+}
+table.ts3_viewer td.suffix img {
+	padding-left: 2px;
+	vertical-align: top;
+}
+table.ts3_viewer td.spacer.solidline {
+	background: url('../../../inc/images/viewer/spacer_solidline.gif') repeat-x;
+}
+table.ts3_viewer td.spacer.dashline {
+	background: url('../../../inc/images/viewer/spacer_dashline.gif') repeat-x;
+}
+table.ts3_viewer td.spacer.dashdotline {
+	background: url('../../../inc/images/viewer/spacer_dashdotline.gif') repeat-x;
+}
+table.ts3_viewer td.spacer.dashdotdotline {
+	background: url('../../../inc/images/viewer/spacer_dashdotdotline.gif') repeat-x;
+}
+table.ts3_viewer td.spacer.dotline {
+	background: url('../../../inc/images/viewer/spacer_dotline.gif') repeat-x;
+}
+
+.icon-ts {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: url("./images/ts.png");
+}
+
+.rtl .ts {
+	background-position: 100% 50%;
+}
+
+.copyr {
+	text-align: center
+}

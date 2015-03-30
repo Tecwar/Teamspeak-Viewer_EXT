@@ -1,0 +1,44 @@
+<!-- INCLUDE overall_header.html -->
+		<div class="panel">
+			<h2 class="login-title">{L_TS}</h2>
+			<!-- IF S_IN_GROUP -->
+			<div id='containerts' >
+				<div class="cinner">
+					<div class='tsviewerbox'>
+						{TSVIEWER}
+					</div>
+					<div class='tsinfobox'>
+						<A HREF="javascript:document.location.reload();" class="button1" title="{L_REFRESH}">{L_REFRESH_BUTTON}</A>
+						<br /><br />
+						<!-- IF S_IN_BANNER -->
+						{BANNER}<br /><br />
+						<!-- ENDIF -->
+						<!-- IF S_IN_CLOGIN -->
+						{L_SERVER}: <b>{SERVER}</b><br />
+						{L_PORT}: <b>{PORT}</b><br />
+						{L_PASSWORT}: <b>{PASSWORT}</b><br />
+						<!-- ENDIF -->
+						<!-- IF S_IN_UPTIME -->
+						<br />
+						{L_UPTIME}: <b>{UPTIME}</b><br />
+						<!-- ENDIF -->
+						<!-- IF S_IN_COUNT -->
+						{L_COUNT}: <b>{COUNT}</b><br />
+						<!-- ENDIF -->
+						<!-- IF S_IN_WKM -->
+						<br /><br /><b>{L_WKM}:</b><br />{WKM}<br />
+						<!-- ENDIF -->
+						<br/>
+						{TSLOGINBUTTON}
+					</div>
+					<div id='cleardiv'></div>
+
+				</div>
+			</div>
+			<!-- ELSE -->
+			<div id='info' class='error info'>{TSINFO}</div>
+			<!-- ENDIF -->
+			<hr>
+			<div class="copyr">Powered by TS-Viewer phpBB &copy; 2014 - 2015 <a href="http://area51.gdrr.info">T&Xi;CS</a> &amp; <a href="http://hard-soft.meyer-franke.com">TimoMF</a></div>
+		</div>
+<!-- INCLUDE overall_footer.html -->

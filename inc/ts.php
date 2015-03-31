@@ -156,39 +156,37 @@ try
 	{
 		if($filetime_wkm == true)
 		{	
-			$wkm = $ts3["virtualserver_welcomemessage"];
-			if (!empty($wkm))
-			{
-				include('tsbbcode.php');
-				$this->template->assign_var('S_IN_WKM', true);
-				$data=tsbbcode($wkm);
-				$this->template->assign_vars(array(
-					'WKM'		=> $data,
-				));	
-				$TSVC->write_cache('WKM', $data);
-			}
-			else
+			$data = $ts3["virtualserver_welcomemessage"];
+			if ($data == '')
 			{
 				$this->template->assign_var('S_IN_WKM', false);
 			}
+			else
+			{
+				include('tsbbcode.'.$phpEx);
+				$this->template->assign_var('S_IN_WKM', true);
+				$data = tsbbcode($data);
+				$this->template->assign_vars(array(
+					'WKM'		=> $data,
+				));	
+			}
+			$TSVC->write_cache('WKM', $data);
 		}
 		else
 		{
-			
-			$wkm = $TSVC->read_cache('WKM');
-			if (!empty($wkm))
+			$data = $TSVC->read_cache('WKM');
+			if ($data == '')
 			{
-				$this->template->assign_var('S_IN_WKM', true);
-				$this->template->assign_vars(array(
-					'WKM'		=> $wkm,
-				));
+				$this->template->assign_var('S_IN_WKM', false);
 			}
 			else
 			{
 				$this->template->assign_var('S_IN_WKM', true);
-			}
+				$this->template->assign_vars(array(
+					'WKM'		=> $data,
+				));
+			}	
 		}
-	
 	}	
 	else
 	{

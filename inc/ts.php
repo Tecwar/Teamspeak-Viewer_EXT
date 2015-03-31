@@ -30,6 +30,7 @@ try
 	$timeset = $this->config['ts_cache_delay'];
 	$filetime_tsviewer = $TSVC->check_cache('TSVIEWER',$timeset );
 	
+	// check cache
 	if($this->config['ts_count'] == true)
 	{
 		$filetime_count = $TSVC->check_cache('COUNT',$timeset );
@@ -66,11 +67,12 @@ try
 		$filetime_wkm = false;
 	}	
 	
-	if($filetime_banner == true || $filetime_tsviewer == true || $filetime_count == true || $filetime_uptime == true || $filetime_wkm == true)
+	// connect to server @no cache or time over
+	if(($filetime_banner || $filetime_tsviewer || $filetime_count || $filetime_uptime || $filetime_wkm) == true)
 	{
-		/* connect to server, authenticate and get TeamSpeak3_Node_Server object by URI */
+		// connect to server, authenticate and get TeamSpeak3_Node_Server object by URI
 		$ts3 = TeamSpeak3::factory("serverquery://".$this->config['ts_user'].":" . $this->config['ts_qpass']."@".$this->config['ts_host'].":".$this->config['ts_query']."/?server_port=".$this->config['ts_voice']."#no_query_clients");
-		/* enable new display mode */
+		// enable new display mode
 		$ts3->setLoadClientlistFirst(TRUE);
 	}
 	
@@ -240,7 +242,7 @@ try
 }
 catch(Exception $e)
 {
-	/* echo error message */
+	// error message
 	$this->template->assign_var('S_IN_GROUP', false); 
 	$this->template->assign_vars(array(
 		'TSINFO'		=> "<p><b>ERROR 0x" . dechex($e->getCode()) . "</b>: " . htmlspecialchars($e->getMessage()) . "</p>",

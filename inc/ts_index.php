@@ -30,6 +30,7 @@ try
 	$TSVC = NEW tscache();
 	$timeset = $this->config['ts_cache_delay'];
 	
+	// check cache
 	if($this->config['ts_index_client'] == true)
 	{
 		$filetime_tsviewer = $TSVC->check_cache('TSINDEX',$timeset );
@@ -47,13 +48,15 @@ try
 		$filetime_count = false;
 	}		
 	
-	if(($filetime_tsviewer == true || $filetime_count == true)) 
+	// connect to server @no cache or time over
+	if(($filetime_tsviewer || $filetime_count ) == true) 
 	{
 		$this->template->assign_var('S_IN_GROUP', true);
-		/* connect to server, authenticate and get TeamSpeak3_Node_Server object by URI */
+		// connect to server, authenticate and get TeamSpeak3_Node_Server object by URI
 		$ts3 = TeamSpeak3::factory("serverquery://".$this->config['ts_user'].":" . $this->config['ts_qpass']."@".$this->config['ts_host'].":".$this->config['ts_query']."/?server_port=".$this->config['ts_voice']."#no_query_clients");
 	}
 
+	// TS-count
 	if($this->config['ts_index_count'] == true)
 	{
 		if($filetime_count == true)
@@ -75,6 +78,7 @@ try
 		}
 	}
 
+	// TS-user
 	if($this->config['ts_index_client'] == true)
 	{
 	if($filetime_tsviewer == true)
@@ -109,7 +113,7 @@ try
 }
 catch(Exception $e)
 {
-	/* echo error message */
+	// error message
 	$this->template->assign_var('S_IN_GROUP', true);
 	$this->template->assign_var('S_IN_ERROR', true); 
 	$this->template->assign_vars(array(

@@ -28,7 +28,7 @@ class ts_module
 
 	public function main($id, $mode)
 	{
-		global $user, $template, $request, $config, $phpbb_log;
+		global $user, $template, $request, $config, $phpbb_log, $phpbb_root_path;
 
 		$this->config	= $config;
 		$this->request	= $request;
@@ -37,8 +37,8 @@ class ts_module
 
 		$this->tpl_name		= 'ts_settings';
 		$this->page_title	= $user->lang('TS_EXT_MANAGE');
-		$form_key			= 'ts';
-		$ts_cache_path		= '../cache/';
+		$form_key		= 'ts';
+		$ts_cache_path		= $phpbb_root_path.'/cache/';
 		add_form_key($form_key);
 
 		if ($this->request->is_set_post('submit'))

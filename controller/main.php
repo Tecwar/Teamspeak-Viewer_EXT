@@ -68,10 +68,6 @@ class main
 	{
 		global $phpbb_root_path, $phpEx;
 
-		// wird benötig um imges sauber zu laden
-		global $phpbb_extension_manager, $phpbb_path_helper;
-		$ext_path = $phpbb_path_helper->update_web_root_path($phpbb_extension_manager->get_extension_path('tecs/ts', true));
-
 		if ($this->config['ts_loginset'] == true && $this->user->data['user_id'] == ANONYMOUS )
 		{
 			login_box();

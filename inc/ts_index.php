@@ -14,8 +14,8 @@ if (!defined('IN_PHPBB'))
 }
 
 global $phpbb_root_path, $phpEx,$ts_cache_path, $ts_cache_ext;
-$ts_cache_path=$phpbb_root_path.'/cache/';
-$ts_cache_ext='.php';
+$ts_cache_path = $phpbb_root_path.'/cache/';
+$ts_cache_ext = '.php';
 
 if (!class_exists('TeamSpeak3'))
 {

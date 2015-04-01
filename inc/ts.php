@@ -15,8 +15,8 @@ if (!defined('IN_PHPBB'))
 
 global $phpbb_root_path, $phpEx,$ts_cache_path, $ts_cache_ext;
 
-$ts_cache_path=$phpbb_root_path.'/cache/';
-$ts_cache_ext='.php';
+$ts_cache_path = $phpbb_root_path.'/cache/';
+$ts_cache_ext = '.php';
 
 if (!class_exists('TeamSpeak3'))
 {
@@ -196,8 +196,9 @@ try
 	// TS-viewer
 	if($filetime_tsviewer == true)
 	{
+		$img_path = generate_board_url().'/ext/tecs/ts/inc/images/';
 		$this->template->assign_var('S_IN_GROUP', true);
-		$data=$ts3->getViewer(new TeamSpeak3_Viewer_Html($ext_path.'inc/images/viewer/', $ext_path.'/inc/images/flags/', "data:image"));
+		$data=$ts3->getViewer(new TeamSpeak3_Viewer_Html($img_path.'viewer/', $img_path.'flags/', "data:image"));
 		$this->template->assign_vars(array(
 			'TSVIEWER'		=> $data,
 		));

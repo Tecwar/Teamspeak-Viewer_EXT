@@ -25,7 +25,7 @@ class initial_module extends \phpbb\db\migration\migration
 			array('config.add', array('ts_qpass', 'query pw')),
 			array('config.add', array('ts_pass', 'client pw')),
 			array('config.add', array('ts_loginip', 'Server IP/Domainname')),
-			array('config.add', array('ts_version', 'v.1.4.6 beta')),
+			array('config.add', array('ts_version', 'v.1.4.7 beta')),
 			array('config.add', array('ts_banner', 1)),
 			array('config.add', array('ts_tsloginbutton', 1)),
 			array('config.add', array('ts_wknachricht', 1)),

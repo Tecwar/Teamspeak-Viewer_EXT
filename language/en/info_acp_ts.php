@@ -84,5 +84,5 @@ $lang = array_merge($lang, array(
 	'TS_LOG'					=> '<strong>Refresh Teamspeak 3 viewer.</strong>',
 	'TS_LINK_LEG'       		=> 'TeamSpeak Viewer Nav-LINK',
 	'TS_LINK_ENABLE'			=> 'Show link',
-	'TS_LINK_ENABLE_EXPLAIN'	=> 'Display the TeamSpeak link in the Forum NavBar.',
+	'TS_LINK_ENABLE_EXPLAIN'	=> 'Display the TeamSpeak link in the navbar forum <br/>. For manual installation, for example the portal this link<br/><a href="%1$s">%1$s</a><br/> use.',
 ));

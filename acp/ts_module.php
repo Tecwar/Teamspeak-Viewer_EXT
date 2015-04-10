@@ -30,15 +30,15 @@ class ts_module
 	{
 		global $user, $template, $request, $config, $phpbb_log, $phpbb_root_path;
 
-		$this->config	= $config;
-		$this->request	= $request;
+		$this->config = $config;
+		$this->request = $request;
 		$this->template	= $template;
-		$this->user		= $user;
+		$this->user = $user;
 
-		$this->tpl_name		= 'ts_settings';
-		$this->page_title	= $user->lang('TS_EXT_MANAGE');
-		$form_key		= 'ts';
-		$ts_cache_path		= $phpbb_root_path.'/cache/';
+		$this->tpl_name	= 'ts_settings';
+		$this->page_title = $user->lang('TS_EXT_MANAGE');
+		$form_key = 'ts';
+		$ts_cache_path = $phpbb_root_path.'/cache/';
 		add_form_key($form_key);
 
 		if ($this->request->is_set_post('submit'))
@@ -92,25 +92,26 @@ class ts_module
 		}
 
 		$this->template->assign_vars(array(
-			'ts_loginset'		=> isset($this->config['ts_loginset']) ? $this->config['ts_loginset'] : '',
-			'ts_groupset'		=> isset($this->config['ts_groupset']) ? $this->config['ts_groupset'] : '',
+			'ts_loginset'			=> isset($this->config['ts_loginset']) ? $this->config['ts_loginset'] : '',
+			'ts_groupset'			=> isset($this->config['ts_groupset']) ? $this->config['ts_groupset'] : '',
 			'ts_host'			=> isset($this->config['ts_host']) ? $this->config['ts_host'] : '',
 			'ts_query'			=> isset($this->config['ts_query']) ? $this->config['ts_query'] : '',
 			'ts_voice'			=> isset($this->config['ts_voice']) ? $this->config['ts_voice'] : '',
 			'ts_user'			=> isset($this->config['ts_user']) ? $this->config['ts_user'] : '',
 			'ts_qpass'			=> 'entered_no_changes',
 			'ts_pass'			=> isset($this->config['ts_pass']) ? $this->config['ts_pass'] : '',
-			'ts_loginip'		=> isset($this->config['ts_loginip']) ? $this->config['ts_loginip'] : '',
+			'ts_loginip'			=> isset($this->config['ts_loginip']) ? $this->config['ts_loginip'] : '',
 			'ts_banner'			=> isset($this->config['ts_banner']) ? $this->config['ts_banner'] : '',
-			'ts_tsloginbutton'	=> isset($this->config['ts_tsloginbutton']) ? $this->config['ts_tsloginbutton'] : '',
-			'ts_wknachricht'	=> isset($this->config['ts_wknachricht']) ? $this->config['ts_wknachricht'] : '',
-			'ts_clogindaten'	=> isset($this->config['ts_clogindaten']) ? $this->config['ts_clogindaten'] : '',
+			'ts_tsloginbutton'		=> isset($this->config['ts_tsloginbutton']) ? $this->config['ts_tsloginbutton'] : '',
+			'ts_wknachricht'		=> isset($this->config['ts_wknachricht']) ? $this->config['ts_wknachricht'] : '',
+			'ts_clogindaten'		=> isset($this->config['ts_clogindaten']) ? $this->config['ts_clogindaten'] : '',
 			'ts_uptime'			=> isset($this->config['ts_uptime']) ? $this->config['ts_uptime'] : '',
 			'ts_count'			=> isset($this->config['ts_count']) ? $this->config['ts_count'] : '',
-			'ts_index_client'	=> isset($this->config['ts_index_client']) ? $this->config['ts_index_client'] : '',
-			'ts_index_count'	=> isset($this->config['ts_index_count']) ? $this->config['ts_index_count'] : '',
-			'ts_cache_delay'	=> isset($this->config['ts_cache_delay']) ? $this->config['ts_cache_delay'] : '',
-			'ts_link_enable'	=> isset($this->config['ts_link_enable']) ? $this->config['ts_link_enable'] : '',
+			'ts_index_client'		=> isset($this->config['ts_index_client']) ? $this->config['ts_index_client'] : '',
+			'ts_index_count'		=> isset($this->config['ts_index_count']) ? $this->config['ts_index_count'] : '',
+			'ts_cache_delay'		=> isset($this->config['ts_cache_delay']) ? $this->config['ts_cache_delay'] : '',
+			'ts_link_enable'		=> isset($this->config['ts_link_enable']) ? $this->config['ts_link_enable'] : '',
+			'TS_LINK_ENABLE_EXPLAIN'	=> $user->lang('TS_LINK_ENABLE_EXPLAIN', $this->config['server_protocol'] . $this->user->host . $this->config['script_path'] . '/teamspeak-viewer' ),
 			'U_ACTION'			=> $this->u_action,
 		));
 

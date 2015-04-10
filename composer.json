@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Teamspeak Viewer base on TeamSpeak 3 PHP Framework",
 	"homepage": "http://area51.gdrr.info",
-	"version": "1.4.6 beta",
+	"version": "1.4.7 beta",
 	"time": "2015-28-03",
 	"license": "GPL-2.0",
 	"authors": [{
